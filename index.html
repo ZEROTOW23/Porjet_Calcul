@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Calculator</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="kisspng-mathematics-subject-classification-computer-icons-curriculum-icons-mathematics-1-wtf-club-5bb1322a760d58.8731484615383393704836.jpg">
+</head>
+<body>
+   <div class="container">
+    <marquee behavior="" direction="">Calcul Now</marquee>
+       <div class="content">
+           <input type="text" class="result" id="result" readonly>
+           <span class="number clear" onclick="document.getElementById('result').value = ''">C</span>
+           <span class="number" onclick="display('%')">%</span>
+           <span class="number" onclick="display('/')">/</span>
+           <span class="number" onclick="display('7')">7</span>
+           <span class="number" onclick="display('8')">8</span>
+           <span class="number" onclick="display('9')">9</span>
+           <span class="number" onclick="display('*')">*</span>
+           <span class="number" onclick="display('4')">4</span>
+           <span class="number" onclick="display('5')">5</span>
+           <span class="number" onclick="display('6')">6</span>
+           <span class="number" onclick="display('-')">-</span>
+           <span class="number" onclick="display('1')">1</span>
+           <span class="number" onclick="display('2')">2</span>
+           <span class="number" onclick="display('3')">3</span>
+           <span class="number" onclick="display('+')">+</span>
+           <span class="number" onclick="display('00')">00</span>
+           <span class="number" onclick="display('0')">0</span>
+           <span class="number" onclick="display('.')">.</span>
+           <span class="number" onclick="result()">=</span>
+       </div>
+   </div>
+   <script>
+
+       function display(value){
+           document.getElementById("result").value += value;
+       }
+
+       function result(){
+           let displayvalue = document.getElementById("result").value;
+           let result = eval(displayvalue);
+           document.getElementById("result").value = result;
+       }
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background-image: url(360_F_779558279_vXSk3lxLCfbQU0LubVRKgIGx7KGcBB18.jpg);
+    z-index: 1;
+}
+
+.container{
+    position: relative;
+    grid-column: span 4;
+   
+    
+}
+
+.container .content{
+    border-radius: 20px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    border: #0a1f62;
+}
+
+.container .content .result{
+    grid-column: span 4;
+    border: #0a1f62;
+    border-radius: 20px 20px;
+    outline: none;
+    border: none;
+    height: 80px;
+    font-size: 20px;
+    padding-right: 15px;
+    text-align: right;
+    background: transparent;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container .content .number{
+    width: 70px;
+    border-radius: 0px;
+    height: 70px;
+    line-height: 70px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    transition: 2s;
+    border: #0a1f62;
+}
+
+.container .content .number:hover{
+background: #0a1f62 ;
+backdrop-filter: blur(10px);
+border: #0a1f62;
+border-radius: 20px 20px;
+transition: 1s;
+color: rgb(222, 217, 217);
+}
+
+.container .content .clear{
+    grid-column: span 2;
+    border-radius: 20px 20px;
+    width: 140px;
+    border: #0a1f62;
+}
