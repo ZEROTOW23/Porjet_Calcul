@@ -10,7 +10,6 @@
 </head>
 <body>
    <div class="container">
-    <marquee behavior="" direction="">Calcul Now</marquee>
        <div class="content">
            <input type="text" class="result" id="result" readonly>
            <span class="number clear" onclick="document.getElementById('result').value = ''">C</span>
@@ -33,9 +32,12 @@
            <span class="number" onclick="display('.')">.</span>
            <span class="number" onclick="result()">=</span>
        </div>
+       <div class="history" id="history">
+           <h2>History</h2>
+           <ul id="history-list"></ul>
+       </div>
    </div>
    <script>
-
        function display(value){
            document.getElementById("result").value += value;
        }
@@ -44,8 +46,15 @@
            let displayvalue = document.getElementById("result").value;
            let result = eval(displayvalue);
            document.getElementById("result").value = result;
+           addHistory(displayvalue + " = " + result);
+       }
+
+       function addHistory(entry) {
+           let historyList = document.getElementById("history-list");
+           let listItem = document.createElement("li");
+           listItem.textContent = entry;
+           historyList.appendChild(listItem);
        }
    </script>
-
 </body>
 </html>
